@@ -34,13 +34,19 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  background-color: white;
+  border-radius: 10px; /* Ya lo tienes, ¡excelente! */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ya lo tienes, ¡muy bien! */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición más suave */
+  border: 1px solid #eee; /* Añade un borde sutil */
+  overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
 }
 
-.tarjeta-producto img {
+.tarjeta-producto img { 
+  /* tamaños de la parte de la imagen de las tarjetas */
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
 }
 
 .info-producto {
@@ -48,6 +54,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  text-align: left; /* Alinea el texto a la izquierda para mejor lectura */
 }
 
 .encabezado-producto {
