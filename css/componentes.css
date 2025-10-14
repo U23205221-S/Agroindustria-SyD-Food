@@ -1,10 +1,10 @@
-/* Card Components */
-.service-card,
-.mvv-card,
-.principle-card,
-.certification-card,
-.product-card,
-.category-box {
+/* Componentes de tarjeta */
+.tarjeta-servicio,
+.tarjeta-mvv,
+.tarjeta-principio,
+.tarjeta-certificacion,
+.tarjeta-producto,
+.caja-categoria {
   background-color: white;
   padding: 2rem;
   border-radius: 10px;
@@ -12,57 +12,57 @@
   transition: transform 0.3s ease;
 }
 
-.service-card:hover,
-.mvv-card:hover,
-.principle-card:hover,
-.certification-card:hover,
-.product-card:hover,
-.category-box:hover {
+.tarjeta-servicio:hover,
+.tarjeta-mvv:hover,
+.tarjeta-principio:hover,
+.tarjeta-certificacion:hover,
+.tarjeta-producto:hover,
+.caja-categoria:hover {
   transform: translateY(-5px);
 }
 
-/* Icons */
-.icon {
+/* Iconos */
+.icono {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #2e5b2e;
   text-align: center;
 }
 
-/* Product Card */
-.product-card {
+/* Tarjeta de Producto */
+.tarjeta-producto {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.product-card img {
+.tarjeta-producto img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
 
-.product-info {
+.info-producto {
   padding: 1.5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.product-header {
+.encabezado-producto {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.product-header h3 {
+.encabezado-producto h3 {
   font-size: 1.3rem;
   color: #2e5b2e;
 }
 
-.category-badge {
+.etiqueta-categoria {
   background-color: #2e5b2e;
   color: white;
   padding: 0.2rem 0.5rem;
@@ -70,36 +70,36 @@
   font-size: 0.8rem;
 }
 
-.product-info p {
+.info-producto p {
   font-size: 0.9rem;
   color: #666;
   margin-bottom: 1rem;
   flex: 1;
 }
 
-.product-specs {
+.especificaciones-producto {
   display: flex;
   justify-content: space-between;
   font-size: 0.9rem;
   color: #666;
 }
 
-/* Achievements */
-.achievements-grid {
+/* Logros */
+.grid-logros {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin-top: 2rem;
 }
 
-.achievement {
+.logro {
   text-align: center;
   padding: 2rem;
   background-color: #f0f0f0;
   border-radius: 10px;
 }
 
-.achievement .number {
+.logro .numero {
   font-size: 2.5rem;
   font-weight: bold;
   color: #2e5b2e;
@@ -107,68 +107,68 @@
   margin-bottom: 0.5rem;
 }
 
-.achievement .label {
+.logro .etiqueta {
   font-size: 1rem;
   color: #666;
 }
 
-/* Certifications Grid */
-.certifications-grid {
+/* Grid de Certificaciones */
+.grid-certificaciones {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin-top: 2rem;
 }
 
-.certification-card {
+.tarjeta-certificacion {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.certification-card .icon {
+.tarjeta-certificacion .icono {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
 
-.certification-card h3 {
+.tarjeta-certificacion h3 {
   font-size: 1.3rem;
   color: #2e5b2e;
   margin-bottom: 0.5rem;
 }
 
-.certification-card p {
+.tarjeta-certificacion p {
   font-size: 0.9rem;
   color: #666;
 }
 
-/* Category Boxes */
-.category-box {
+/* Cajas de Categoría */
+.caja-categoria {
   padding: 2rem;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.category-box h3 {
+.caja-categoria h3 {
   font-size: 1.5rem;
   color: #2e5b2e;
   margin-bottom: 1rem;
 }
 
-.category-box p {
+.caja-categoria p {
   font-size: 1rem;
   color: #666;
   margin-bottom: 1rem;
 }
 
-.category-box ul {
+.caja-categoria ul {
   list-style: none;
   padding-left: 1rem;
 }
 
-.category-box li {
+.caja-categoria li {
   font-size: 0.9rem;
   color: #666;
   margin-bottom: 0.5rem;
@@ -176,22 +176,22 @@
   padding-left: 1rem;
 }
 
-.category-box li:before {
+.caja-categoria li:before {
   content: "•";
   position: absolute;
   left: 0;
   color: #2e5b2e;
 }
 
-/* Filter Buttons */
-.filter-buttons {
+/* Botones de Filtro */
+.botones-filtro {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 1rem;
 }
 
-.filter-btn {
+.boton-filtro {
   padding: 0.5rem 1rem;
   background-color: #f0f0f0;
   border: 1px solid #ddd;
@@ -200,39 +200,39 @@
   transition: all 0.3s ease;
 }
 
-.filter-btn:hover,
-.filter-btn.active {
+.boton-filtro:hover,
+.boton-filtro.activo {
   background-color: #2e5b2e;
   color: white;
   border-color: #2e5b2e;
 }
 
-.filter-label {
+.etiqueta-filtro {
   font-weight: 500;
   margin-bottom: 0.5rem;
   color: #333;
 }
 
-.product-count {
+.conteo-productos {
   font-size: 0.9rem;
   color: #666;
   margin-top: 1rem;
 }
 
-/* Info Section */
-.info-section {
+/* Sección de Información */
+.seccion-informacion {
   padding: 4rem 5%;
   background-color: #f0f0f0;
   text-align: center;
 }
 
-.info-section h2 {
+.seccion-informacion h2 {
   font-size: 2.2rem;
   color: #2e5b2e;
   margin-bottom: 1rem;
 }
 
-.info-section p {
+.seccion-informacion p {
   font-size: 1.1rem;
   color: #666;
   margin-bottom: 2rem;
@@ -241,50 +241,50 @@
   margin-right: auto;
 }
 
-.info-buttons {
+.botones-informacion {
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-/* History Section */
-.history-section {
+/* Sección de Historia */
+.seccion-historia {
   display: flex;
   gap: 2rem;
   padding: 4rem 5%;
   background-color: white;
 }
 
-.history-content {
+.contenido-historia {
   flex: 1;
 }
 
-.history-content h2 {
+.contenido-historia h2 {
   font-size: 2.2rem;
   color: #2e5b2e;
   margin-bottom: 1rem;
 }
 
-.history-content p {
+.contenido-historia p {
   font-size: 1.1rem;
   color: #666;
   margin-bottom: 1rem;
   line-height: 1.6;
 }
 
-.history-image {
+.imagen-historia {
   flex: 1;
 }
 
-.history-image img {
+.imagen-historia img {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* MVV Section */
-.mvv-section {
+/* Sección MVV */
+.seccion-mvv {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -292,32 +292,32 @@
   background-color: white;
 }
 
-/* Principles Section */
-.principles-section {
+/* Sección de Principios */
+.seccion-principios {
   padding: 4rem 5%;
   background-color: white;
 }
 
-.principles-section h2 {
+.seccion-principios h2 {
   font-size: 2.2rem;
   color: #2e5b2e;
   margin-bottom: 2rem;
   text-align: center;
 }
 
-.principles-grid {
+.grid-principios {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-/* Certifications Section */
-.certifications-section {
+/* Sección de Certificaciones */
+.seccion-certificaciones {
   padding: 4rem 5%;
   background-color: white;
 }
 
-.certifications-section h2 {
+.seccion-certificaciones h2 {
   font-size: 2.2rem;
   color: #2e5b2e;
   margin-bottom: 2rem;

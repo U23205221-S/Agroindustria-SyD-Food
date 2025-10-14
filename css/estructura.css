@@ -1,4 +1,4 @@
-.header {
+.encabezado {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,13 +26,13 @@
   color: #2e5b2e;
 }
 
-.nav ul {
+.navegacion ul {
   display: flex;
   list-style: none;
   gap: 1.5rem;
 }
 
-.nav a {
+.navegacion a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -41,32 +41,32 @@
   transition: all 0.3s ease;
 }
 
-.nav a:hover,
-.nav a.active {
+.navegacion a:hover,
+.navegacion a.activo {
   background-color: #2e5b2e;
   color: white;
 }
 
-.page-title {
+.titulo-pagina {
   text-align: center;
   padding: 3rem 5%;
   background-color: white;
 }
 
-.page-title h1 {
+.titulo-pagina h1 {
   font-size: 2.5rem;
   color: #2e5b2e;
   margin-bottom: 1rem;
 }
 
-.page-title p {
+.titulo-pagina p {
   font-size: 1.1rem;
   color: #666;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.hero-section {
+.hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,48 +75,48 @@
   color: white;
 }
 
-.hero-content {
+.contenido-hero {
   width: 50%;
 }
 
-.hero-content h1 {
+.contenido-hero h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
-.hero-content h1 span {
+.contenido-hero h1 span {
   color: #e68a00;
 }
 
-.hero-content p {
+.contenido-hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   line-height: 1.6;
 }
 
-.hero-image {
+.imagen-hero {
   width: 45%;
 }
 
-.hero-image img {
+.imagen-hero img {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.why-choose-us {
+.por-que {
   padding: 4rem 5%;
   text-align: center;
 }
 
-.why-choose-us h2 {
+.por-que h2 {
   font-size: 2.2rem;
   color: #2e5b2e;
   margin-bottom: 1rem;
 }
 
-.why-choose-us p {
+.por-que p {
   font-size: 1.1rem;
   color: #666;
   margin-bottom: 2rem;
@@ -125,14 +125,14 @@
   margin-right: auto;
 }
 
-.features-grid {
+.grid-caracteristicas {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin-top: 2rem;
 }
 
-.feature-card {
+.tarjeta-caracteristica {
   background-color: white;
   padding: 2rem;
   border-radius: 10px;
@@ -140,23 +140,23 @@
   transition: transform 0.3s ease;
 }
 
-.feature-card:hover {
+.tarjeta-caracteristica:hover {
   transform: translateY(-5px);
 }
 
-.feature-card .icon {
+.tarjeta-caracteristica .icono {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #2e5b2e;
 }
 
-.feature-card h3 {
+.tarjeta-caracteristica h3 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   color: #2e5b2e;
 }
 
-.about-section {
+.seccion-nosotros {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -164,46 +164,46 @@
   background-color: white;
 }
 
-.about-image {
+.imagen-nosotros {
   width: 45%;
 }
 
-.about-image img {
+.imagen-nosotros img {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.about-content {
+.contenido-nosotros {
   width: 50%;
 }
 
-.about-content h2 {
+.contenido-nosotros h2 {
   font-size: 2.2rem;
   color: #2e5b2e;
   margin-bottom: 1rem;
 }
 
-.about-content p {
+.contenido-nosotros p {
   font-size: 1.1rem;
   color: #666;
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
 
-.cta-section {
+.seccion-cta {
   padding: 4rem 5%;
   text-align: center;
   background-color: #2e5b2e;
   color: white;
 }
 
-.cta-section h2 {
+.seccion-cta h2 {
   font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 
-.cta-section p {
+.seccion-cta p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
   max-width: 800px;
@@ -211,14 +211,14 @@
   margin-right: auto;
 }
 
-.contact-section {
+.seccion-contacto {
   display: flex;
   gap: 2rem;
   padding: 4rem 5%;
   background-color: white;
 }
 
-.contact-form {
+.formulario-contacto {
   flex: 1;
   background-color: white;
   padding: 2rem;
@@ -226,25 +226,25 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.contact-form h3 {
+.formulario-contacto h3 {
   font-size: 1.5rem;
   color: #2e5b2e;
   margin-bottom: 1.5rem;
 }
 
-.form-group {
+.grupo-formulario {
   margin-bottom: 1.5rem;
 }
 
-.form-group label {
+.grupo-formulario label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
   color: #333;
 }
 
-.form-group input,
-.form-group textarea {
+.grupo-formulario input,
+.grupo-formulario textarea {
   width: 100%;
   padding: 0.8rem;
   border: 1px solid #ddd;
@@ -253,18 +253,18 @@
   transition: border-color 0.3s ease;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus {
   outline: none;
   border-color: #2e5b2e;
 }
 
-.form-group textarea {
+.grupo-formulario textarea {
   min-height: 100px;
   resize: vertical;
 }
 
-.contact-info {
+.info-contacto {
   flex: 1;
   background-color: white;
   padding: 2rem;
@@ -272,13 +272,13 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.contact-info h3 {
+.info-contacto h3 {
   font-size: 1.5rem;
   color: #2e5b2e;
   margin-bottom: 1.5rem;
 }
 
-.info-item {
+.item-info {
   display: flex;
   gap: 1rem;
   margin-bottom: 1.5rem;
@@ -287,36 +287,36 @@
   border-radius: 5px;
 }
 
-.info-icon {
+.icono-info {
   font-size: 1.5rem;
   color: #2e5b2e;
   display: flex;
   align-items: center;
 }
 
-.info-item div:last-child {
+.item-info div:last-child {
   flex: 1;
 }
 
-.info-item strong {
+.item-info strong {
   display: block;
   margin-bottom: 0.5rem;
   color: #2e5b2e;
 }
 
-.location-section {
+.seccion-ubicacion {
   padding: 4rem 5%;
   background-color: white;
 }
 
-.location-section h3 {
+.seccion-ubicacion h3 {
   font-size: 1.5rem;
   color: #2e5b2e;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
-.map-placeholder {
+.placeholder-mapa {
   background-color: #f0f0f0;
   padding: 2rem;
   border-radius: 10px;
@@ -324,13 +324,13 @@
   margin-bottom: 1rem;
 }
 
-.map-icon {
+.icono-mapa {
   font-size: 2rem;
   color: #2e5b2e;
   margin-bottom: 0.5rem;
 }
 
-.quick-quote {
+.cotizacion-rapida {
   padding: 2rem;
   background-color: #2e5b2e;
   color: white;
@@ -339,12 +339,12 @@
   margin: 2rem 5%;
 }
 
-.quick-quote h3 {
+.cotizacion-rapida h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.quick-quote p {
+.cotizacion-rapida p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   max-width: 800px;
@@ -352,19 +352,19 @@
   margin-right: auto;
 }
 
-.visit-section {
+.seccion-visita {
   padding: 4rem 5%;
   background-color: #f0f0f0;
   text-align: center;
 }
 
-.visit-section h2 {
+.seccion-visita h2 {
   font-size: 2.2rem;
   color: #2e5b2e;
   margin-bottom: 1rem;
 }
 
-.visit-section p {
+.seccion-visita p {
   font-size: 1.1rem;
   color: #666;
   margin-bottom: 2rem;
@@ -373,13 +373,13 @@
   margin-right: auto;
 }
 
-.footer {
+.pie {
   background-color: #2e5b2e;
   color: white;
   padding: 2rem 5%;
 }
 
-.footer-content {
+.contenido-pie {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
@@ -387,37 +387,37 @@
   flex-wrap: wrap;
 }
 
-.footer-brand {
+.marca-pie {
   flex: 1;
   min-width: 300px;
 }
 
-.footer-brand img {
+.marca-pie img {
   height: 40px;
   margin-bottom: 1rem;
 }
 
-.footer-brand h3 {
+.marca-pie h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
-.footer-brand p {
+.marca-pie p {
   font-size: 0.9rem;
   line-height: 1.5;
 }
 
-.footer-contact {
+.contacto-pie {
   flex: 1;
   min-width: 200px;
 }
 
-.footer-contact h4 {
+.contacto-pie h4 {
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
 
-.footer-contact p {
+.contacto-pie p {
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
   display: flex;
@@ -425,26 +425,26 @@
   gap: 0.5rem;
 }
 
-.footer-contact p i {
+.contacto-pie p i {
   font-size: 1rem;
 }
 
-.footer-social {
+.social-pie {
   flex: 1;
   min-width: 200px;
 }
 
-.footer-social h4 {
+.social-pie h4 {
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
 
-.social-icons {
+.iconos-sociales {
   display: flex;
   gap: 1rem;
 }
 
-.social-icon {
+.icono-social {
   width: 30px;
   height: 30px;
   background-color: white;
@@ -455,98 +455,139 @@
   transition: transform 0.3s ease;
 }
 
-.social-icon:hover {
+.icono-social:hover {
   transform: scale(1.1);
 }
 
-.footer-bottom {
+.fondo-pie {
   text-align: center;
   padding-top: 1rem;
   border-top: 1px solid rgba(255,255,255,0.2);
   font-size: 0.9rem;
 }
 
-/* Responsive */
+/* Responsive / Adaptable */
 @media (max-width: 768px) {
-  .header {
+  .encabezado {
     flex-direction: column;
     padding: 1rem 2%;
   }
 
-  .nav ul {
+  .navegacion ul {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem;
   }
 
-  .hero-section {
+  .hero {
     flex-direction: column;
     padding: 3rem 2%;
   }
 
-  .hero-content {
+  .contenido-hero {
     width: 100%;
     margin-bottom: 2rem;
   }
 
-  .hero-image {
+  .imagen-hero {
     width: 100%;
   }
 
-  .features-grid {
+  .grid-caracteristicas {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about-section {
+  .seccion-nosotros {
     flex-direction: column;
     padding: 3rem 2%;
   }
 
-  .about-image {
+  .imagen-nosotros {
     width: 100%;
     margin-bottom: 2rem;
   }
 
-  .about-content {
+  .contenido-nosotros {
     width: 100%;
   }
 
-  .contact-section {
+  .seccion-contacto {
     flex-direction: column;
     padding: 3rem 2%;
   }
 
-  .contact-form,
-  .contact-info {
+  .formulario-contacto,
+  .info-contacto {
     width: 100%;
   }
 
-  .footer-content {
+  .contenido-pie {
     flex-direction: column;
     gap: 2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .features-grid {
+  .grid-caracteristicas {
     grid-template-columns: 1fr;
   }
 
-  .page-title {
+  .titulo-pagina {
     padding: 2rem 2%;
   }
 
-  .page-title h1 {
+  .titulo-pagina h1 {
     font-size: 2rem;
   }
 
-  .hero-content h1 {
+  .contenido-hero h1 {
     font-size: 2rem;
   }
 
-  .footer-brand,
-  .footer-contact,
-  .footer-social {
+  .marca-pie,
+  .contacto-pie,
+  .social-pie {
     min-width: 100%;
+  }
+}
+
+/* Sección de Filtros del Catálogo */
+.seccion-filtros {
+  padding: 2rem 5%;
+  background-color: white;
+  text-align: center;
+}
+
+/* Grid de Productos */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem 5%;
+  background-color: #f9f9f9;
+}
+
+/* Información de Categorías */
+.informacion-categorias {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 4rem 5%;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .informacion-categorias {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-productos {
+    grid-template-columns: 1fr;
   }
 }

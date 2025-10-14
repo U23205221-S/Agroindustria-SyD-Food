@@ -10,7 +10,7 @@ body {
   color: #333;
 }
 
-/* Buttons */
+/* Botones */
 .btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -26,41 +26,41 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.btn-green {
+.btn-verde {
   background-color: #2e5b2e;
   color: white;
 }
 
-.btn-green:hover {
+.btn-verde:hover {
   background-color: #244724;
 }
 
-.btn-orange {
+.btn-naranja {
   background-color: #e68a00;
   color: white;
 }
 
-.btn-orange:hover {
+.btn-naranja:hover {
   background-color: #cc7a00;
 }
 
-.btn-outline {
+.btn-contorno {
   background-color: transparent;
   color: #2e5b2e;
   border: 2px solid #2e5b2e;
 }
 
-.btn-outline:hover {
+.btn-contorno:hover {
   background-color: #2e5b2e;
   color: white;
 }
 
-.btn-light {
+.btn-claro {
   background-color: #e0f7e0;
   color: #2e5b2e;
 }
 
-.btn-light:hover {
+.btn-claro:hover {
   background-color: #ccebc5;
 }
 
