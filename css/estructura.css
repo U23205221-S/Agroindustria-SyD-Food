@@ -1,3 +1,4 @@
+/* Encabezado del sitio (header.encabezado) presente en Inicio, Información, Catálogo y Contacto */
 .encabezado {
   display: flex;
   justify-content: space-between;
@@ -10,28 +11,33 @@
   z-index: 1000;
 }
 
+/* Contenedor del logotipo en el encabezado (div.logo en todas las páginas) */
 .logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
+/* Imagen del logo dentro del encabezado (img dentro de .logo) */
 .logo img {
   height: 40px;
 }
 
+/* Texto del nombre de la marca junto al logo (span dentro de .logo) */
 .logo span {
   font-weight: 600;
   font-size: 1.1rem;
   color: #2e5b2e;
 }
 
+/* Lista de navegación principal (ul dentro de nav.navegacion en todas las páginas) */
 .navegacion ul {
   display: flex;
   list-style: none;
   gap: 1.5rem;
 }
 
+/* Enlaces de navegación (a dentro de nav.navegacion) */
 .navegacion a {
   text-decoration: none;
   color: #333;
@@ -41,24 +47,28 @@
   transition: all 0.3s ease;
 }
 
+/* Estado hover y activo de navegación (clase .activo usada en el enlace de la página actual) */
 .navegacion a:hover,
 .navegacion a.activo {
   background-color: #2e5b2e;
   color: white;
 }
 
+/* Título de página genérico (section.titulo-pagina en Información, Catálogo y Contacto) */
 .titulo-pagina {
   text-align: center;
   padding: 3rem 5%;
   background-color: white;
 }
 
+/* Título principal dentro de .titulo-pagina (h1) */
 .titulo-pagina h1 {
   font-size: 2.5rem;
   color: #2e5b2e;
   margin-bottom: 1rem;
 }
 
+/* Descripción/subtítulo dentro de .titulo-pagina (p) */
 .titulo-pagina p {
   font-size: 1.1rem;
   color: #666;
@@ -66,6 +76,7 @@
   margin: 0 auto;
 }
 
+/* Sección hero de la página de Inicio (section.hero en Inicio.html) */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -75,47 +86,56 @@
   color: white;
 }
 
+/* Columna de texto en el hero (div.contenido-hero en Inicio.html) */
 .contenido-hero {
   width: 50%;
 }
 
+/* Título del hero (h1 dentro de .contenido-hero en Inicio.html) */
 .contenido-hero h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
+/* Acento de color en el título del hero (span dentro del h1 del hero) */
 .contenido-hero h1 span {
   color: #e68a00;
 }
 
+/* Párrafo descriptivo del hero (p dentro de .contenido-hero) */
 .contenido-hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   line-height: 1.6;
 }
 
+/* Columna de imagen del hero (div.imagen-hero en Inicio.html) */
 .imagen-hero {
   width: 45%;
 }
 
+/* Imagen dentro del hero (img dentro de .imagen-hero) */
 .imagen-hero img {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+/* Sección "¿Por qué elegirnos?" en Inicio (section.por-que) */
 .por-que {
   padding: 4rem 5%;
   text-align: center;
 }
 
+/* Título de la sección por-que (h2 dentro de .por-que) */
 .por-que h2 {
   font-size: 2.2rem;
   color: #2e5b2e;
   margin-bottom: 1rem;
 }
 
+/* Párrafo de introducción en por-que (p dentro de .por-que) */
 .por-que p {
   font-size: 1.1rem;
   color: #666;
@@ -125,6 +145,7 @@
   margin-right: auto;
 }
 
+/* Grid de características en Inicio (div.grid-caracteristicas) */
 .grid-caracteristicas {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -132,6 +153,7 @@
   margin-top: 2rem;
 }
 
+/* Tarjeta individual de característica (div.tarjeta-caracteristica en Inicio) */
 .tarjeta-caracteristica {
   background-color: white;
   padding: 2rem;
@@ -140,22 +162,19 @@
   transition: transform 0.3s ease;
 }
 
+/* Efecto hover de la tarjeta de característica */
 .tarjeta-caracteristica:hover {
   transform: translateY(-5px);
 }
 
-.tarjeta-caracteristica .icono {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #2e5b2e;
-}
-
+/* Título dentro de la tarjeta de característica (h3) */
 .tarjeta-caracteristica h3 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   color: #2e5b2e;
 }
 
+/* Sección "Sobre nosotros" de Inicio (section.seccion-nosotros) */
 .seccion-nosotros {
   display: flex;
   justify-content: space-between;
@@ -164,26 +183,32 @@
   background-color: white;
 }
 
+/* Contenedor de imagen en sección nosotros (div.imagen-nosotros) */
 .imagen-nosotros {
   width: 45%;
+
 }
 
+/* Imagen de sección nosotros (img dentro de .imagen-nosotros) */
 .imagen-nosotros img {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+/* Contenido de texto en sección nosotros (div.contenido-nosotros) */
 .contenido-nosotros {
   width: 50%;
 }
 
+/* Título en sección nosotros (h2 dentro de .contenido-nosotros) */
 .contenido-nosotros h2 {
   font-size: 2.2rem;
   color: #2e5b2e;
   margin-bottom: 1rem;
 }
 
+/* Párrafos en sección nosotros (p dentro de .contenido-nosotros) */
 .contenido-nosotros p {
   font-size: 1.1rem;
   color: #666;
@@ -191,6 +216,7 @@
   line-height: 1.6;
 }
 
+/* Llamado a la acción en Inicio (section.seccion-cta) */
 .seccion-cta {
   padding: 4rem 5%;
   text-align: center;
@@ -198,11 +224,13 @@
   color: white;
 }
 
+/* Título del CTA (h2 dentro de .seccion-cta) */
 .seccion-cta h2 {
   font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 
+/* Descripción del CTA (p dentro de .seccion-cta) */
 .seccion-cta p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
@@ -211,6 +239,7 @@
   margin-right: auto;
 }
 
+/* Sección principal de Contacto (section.seccion-contacto en contacto.html) */
 .seccion-contacto {
   display: flex;
   gap: 2rem;
@@ -218,6 +247,7 @@
   background-color: white;
 }
 
+/* Columna del formulario de contacto (div.formulario-contacto en contacto.html) */
 .formulario-contacto {
   flex: 1;
   background-color: white;
@@ -226,16 +256,19 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Título del formulario (h3 dentro de .formulario-contacto) */
 .formulario-contacto h3 {
   font-size: 1.5rem;
   color: #2e5b2e;
   margin-bottom: 1.5rem;
 }
 
+/* Grupo de campos del formulario (div.grupo-formulario en contacto.html) */
 .grupo-formulario {
   margin-bottom: 1.5rem;
 }
 
+/* Etiqueta de campo de formulario (label dentro de .grupo-formulario) */
 .grupo-formulario label {
   display: block;
   margin-bottom: 0.5rem;
@@ -243,6 +276,7 @@
   color: #333;
 }
 
+/* Campos de entrada y área de texto (input, textarea dentro de .grupo-formulario) */
 .grupo-formulario input,
 .grupo-formulario textarea {
   width: 100%;
@@ -253,17 +287,20 @@
   transition: border-color 0.3s ease;
 }
 
+/* Estado focus de los campos del formulario */
 .grupo-formulario input:focus,
 .grupo-formulario textarea:focus {
   outline: none;
   border-color: #2e5b2e;
 }
 
+/* Altura y redimensionamiento del textarea del formulario */
 .grupo-formulario textarea {
   min-height: 100px;
   resize: vertical;
 }
 
+/* Columna de información de contacto (div.info-contacto en contacto.html) */
 .info-contacto {
   flex: 1;
   background-color: white;
@@ -272,12 +309,14 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Título de la columna de información (h3 dentro de .info-contacto) */
 .info-contacto h3 {
   font-size: 1.5rem;
   color: #2e5b2e;
   margin-bottom: 1.5rem;
 }
 
+/* Ítems de información de contacto (div.item-info en contacto.html) */
 .item-info {
   display: flex;
   gap: 1rem;
@@ -287,6 +326,7 @@
   border-radius: 5px;
 }
 
+/* Icono a la izquierda del ítem de info (div.icono-info en contacto.html) */
 .icono-info {
   font-size: 1.5rem;
   color: #2e5b2e;
@@ -294,21 +334,25 @@
   align-items: center;
 }
 
+/* Columna de texto dentro del ítem de info (último div en .item-info) */
 .item-info div:last-child {
   flex: 1;
 }
 
+/* Título del ítem de info (strong dentro de .item-info) */
 .item-info strong {
   display: block;
   margin-bottom: 0.5rem;
   color: #2e5b2e;
 }
 
+/* Sección de ubicación (section.seccion-ubicacion en contacto.html) */
 .seccion-ubicacion {
   padding: 4rem 5%;
   background-color: white;
 }
 
+/* Título de ubicación (h3 dentro de .seccion-ubicacion) */
 .seccion-ubicacion h3 {
   font-size: 1.5rem;
   color: #2e5b2e;
@@ -316,6 +360,7 @@
   text-align: center;
 }
 
+/* Contenedor placeholder para el mapa (div.placeholder-mapa en contacto.html) */
 .placeholder-mapa {
   background-color: #f0f0f0;
   padding: 2rem;
@@ -324,12 +369,14 @@
   margin-bottom: 1rem;
 }
 
+/* Icono del mapa (div.icono-mapa en contacto.html) */
 .icono-mapa {
   font-size: 2rem;
   color: #2e5b2e;
   margin-bottom: 0.5rem;
 }
 
+/* Sección de cotización rápida (section.cotizacion-rapida en contacto.html) */
 .cotizacion-rapida {
   padding: 2rem;
   background-color: #2e5b2e;
@@ -339,11 +386,13 @@
   margin: 2rem 5%;
 }
 
+/* Título de la cotización rápida (h3 en .cotizacion-rapida) */
 .cotizacion-rapida h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
+/* Texto descriptivo de la cotización rápida (p en .cotizacion-rapida) */
 .cotizacion-rapida p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
@@ -352,18 +401,21 @@
   margin-right: auto;
 }
 
+/* Sección para invitar a visitar (section.seccion-visita en contacto.html) */
 .seccion-visita {
   padding: 4rem 5%;
   background-color: #f0f0f0;
   text-align: center;
 }
 
+/* Título de la sección visita (h2 en .seccion-visita) */
 .seccion-visita h2 {
   font-size: 2.2rem;
   color: #2e5b2e;
   margin-bottom: 1rem;
 }
 
+/* Texto de la sección visita (p en .seccion-visita) */
 .seccion-visita p {
   font-size: 1.1rem;
   color: #666;
@@ -373,12 +425,14 @@
   margin-right: auto;
 }
 
+/* Pie de página global (footer.pie en todas las páginas) */
 .pie {
   background-color: #2e5b2e;
   color: white;
   padding: 2rem 5%;
 }
 
+/* Contenedor principal del pie de página (div.contenido-pie) */
 .contenido-pie {
   display: flex;
   justify-content: space-between;
@@ -387,36 +441,43 @@
   flex-wrap: wrap;
 }
 
+/* Columna de marca en el pie (div.marca-pie) */
 .marca-pie {
   flex: 1;
   min-width: 300px;
 }
 
+/* Logo dentro del pie (img en .marca-pie) */
 .marca-pie img {
   height: 40px;
   margin-bottom: 1rem;
 }
 
+/* Título de marca en el pie (h3 en .marca-pie) */
 .marca-pie h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
+/* Descripción de marca en el pie (p en .marca-pie) */
 .marca-pie p {
   font-size: 0.9rem;
   line-height: 1.5;
 }
 
+/* Columna de datos de contacto en el pie (div.contacto-pie) */
 .contacto-pie {
   flex: 1;
   min-width: 200px;
 }
 
+/* Título de la sección contacto del pie (h4 en .contacto-pie) */
 .contacto-pie h4 {
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
 
+/* Párrafos/filas de contacto en el pie (p en .contacto-pie) */
 .contacto-pie p {
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
@@ -425,25 +486,30 @@
   gap: 0.5rem;
 }
 
+/* Tamaño de los íconos en los párrafos del pie (i en .contacto-pie p) */
 .contacto-pie p i {
   font-size: 1rem;
 }
 
+/* Columna de redes sociales en el pie (div.social-pie) */
 .social-pie {
   flex: 1;
   min-width: 200px;
 }
 
+/* Título de redes sociales en el pie (h4 en .social-pie) */
 .social-pie h4 {
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
 
+/* Contenedor de iconos sociales (div.iconos-sociales) */
 .iconos-sociales {
   display: flex;
   gap: 1rem;
 }
 
+/* Botón redondo de red social (a.icono-social en el pie) */
 .icono-social {
   width: 30px;
   height: 30px;
@@ -455,10 +521,12 @@
   transition: transform 0.3s ease;
 }
 
+/* Efecto hover sobre los iconos sociales */
 .icono-social:hover {
   transform: scale(1.1);
 }
 
+/* Franja inferior del pie (div.fondo-pie) */
 .fondo-pie {
   text-align: center;
   padding-top: 1rem;
@@ -467,83 +535,102 @@
 }
 
 /* Responsive / Adaptable */
+/* Reglas para pantallas <= 768px (tablets y móviles grandes) */
 @media (max-width: 768px) {
+  /* Ajustes del encabezado en pantallas pequeñas */
   .encabezado {
     flex-direction: column;
     padding: 1rem 2%;
   }
 
+  /* Navegación adaptable (lista de enlaces) */
   .navegacion ul {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem;
   }
 
+  /* Estructura de la sección heroe en columnas */
   .hero {
     flex-direction: column;
     padding: 3rem 2%;
   }
 
+  /* Ancho completo del contenido del hero */
   .contenido-hero {
     width: 100%;
     margin-bottom: 2rem;
   }
 
+  /* Imagen del hero a ancho completo */
   .imagen-hero {
     width: 100%;
   }
 
+  /* Grid de características a 2 columnas */
   .grid-caracteristicas {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Sección nosotros en columna */
   .seccion-nosotros {
     flex-direction: column;
     padding: 3rem 2%;
   }
 
+  /* Imagen nosotros a ancho completo */
   .imagen-nosotros {
     width: 100%;
     margin-bottom: 2rem;
   }
 
+  /* Contenido nosotros a ancho completo */
   .contenido-nosotros {
     width: 100%;
   }
 
+  /* Sección contacto en columna */
   .seccion-contacto {
     flex-direction: column;
     padding: 3rem 2%;
   }
 
+  /* Formularios y columna info a 100% */
   .formulario-contacto,
   .info-contacto {
     width: 100%;
   }
 
+  /* Contenido del pie en columna */
   .contenido-pie {
     flex-direction: column;
     gap: 2rem;
   }
 }
 
+/* Reglas para pantallas <= 480px (móviles) */
 @media (max-width: 480px) {
+  /* Grid de características a 1 columna */
   .grid-caracteristicas {
     grid-template-columns: 1fr;
   }
 
+  /* Espaciado del título de página en móvil */
   .titulo-pagina {
     padding: 2rem 2%;
   }
 
+  /* Tamaño del h1 en móvil */
   .titulo-pagina h1 {
     font-size: 2rem;
   }
 
+  /* Tamaño del título del hero en móvil */
   .contenido-hero h1 {
     font-size: 2rem;
   }
 
+  /* Columnas del pie a una sola columna en móvil */
   .marca-pie,
   .contacto-pie,
   .social-pie {
@@ -552,6 +639,7 @@
 }
 
 /* Sección de Filtros del Catálogo */
+/* Barra de filtros del catálogo (section.seccion-filtros en catalogo-modulo/catalogo.html) */
 .seccion-filtros {
   padding: 2rem 5%;
   background-color: white;
@@ -559,6 +647,7 @@
 }
 
 /* Grid de Productos */
+/* Cuadrícula de tarjetas de producto (section.grid-productos en catálogo) */
 .grid-productos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -568,6 +657,7 @@
 }
 
 /* Información de Categorías */
+/* Bloques informativos de categorías (section.informacion-categorias en catálogo) */
 .informacion-categorias {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -576,6 +666,7 @@
   background-color: white;
 }
 
+/* Responsive de catálogo para <= 768px */
 @media (max-width: 768px) {
   .grid-productos {
     grid-template-columns: repeat(2, 1fr);
@@ -586,6 +677,7 @@
   }
 }
 
+/* Responsive de catálogo para <= 480px */
 @media (max-width: 480px) {
   .grid-productos {
     grid-template-columns: 1fr;

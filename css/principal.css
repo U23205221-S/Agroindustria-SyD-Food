@@ -1,3 +1,4 @@
+/* Reset básico y tipografía por defecto (todas las páginas) */
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +6,14 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Fondo y color de texto global del documento (etiqueta body en todas las páginas) */
 body {
   background-color: #f9f9f9;
   color: #333;
 }
 
 /* Botones */
+/* Estilos base para cualquier elemento con clase .btn (a, button) */
 .btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -21,50 +24,60 @@ body {
   transition: all 0.3s ease;
 }
 
+/* Efecto hover genérico para .btn */
 .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Variación de botón verde (clase .btn-verde: CTA, enlaces en Inicio y Catálogo) */
 .btn-verde {
   background-color: #2e5b2e;
   color: white;
 }
 
+/* Hover del botón verde */
 .btn-verde:hover {
   background-color: #244724;
 }
 
+/* Variación de botón naranja (clase .btn-naranja: enlace "Ver Catálogo" en Inicio) */
 .btn-naranja {
   background-color: #e68a00;
   color: white;
 }
 
+/* Hover del botón naranja */
 .btn-naranja:hover {
   background-color: #cc7a00;
 }
 
+/* Botón con contorno verde (clase .btn-contorno: enlaces secundarios) */
 .btn-contorno {
   background-color: transparent;
   color: #2e5b2e;
   border: 2px solid #2e5b2e;
 }
 
+/* Hover del botón con contorno */
 .btn-contorno:hover {
   background-color: #2e5b2e;
   color: white;
 }
 
+/* Botón claro (clase .btn-claro: usado en contacto para llamada) */
 .btn-claro {
   background-color: #e0f7e0;
   color: #2e5b2e;
 }
 
+/* Hover del botón claro */
 .btn-claro:hover {
   background-color: #ccebc5;
 }
 
 /* Badges */
+/* Insignias/contadores (span.badge, usado en los filtros del catálogo) */
 .badge {
   background-color: #2e5b2e;
   color: white;
