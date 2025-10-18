@@ -1,4 +1,4 @@
-/* Componentes de tarjeta (usados en Información y Catálogo) */
+/* Componentes de tarjeta (en Información y Catálogo) */
 .tarjeta-servicio,
 .tarjeta-mvv,
 .tarjeta-principio,
@@ -22,7 +22,7 @@
   transform: translateY(-5px);
 }
 
-/* Iconos genéricos centrados (div.icono en varias tarjetas) */
+/* Iconos centrados (en tarjetas) */
 .icono {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -36,14 +36,13 @@
   flex-direction: column;
   height: 100%;
   background-color: white;
-  border-radius: 10px; /* Ya lo tienes, ¡excelente! */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ya lo tienes, ¡muy bien! */
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición más suave */
   border: 1px solid #eee; /* Añade un borde sutil */
   overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
 }
 
-/* Imagen de la tarjeta de producto (img directo dentro de .tarjeta-producto) */
 .tarjeta-producto img { 
   /* tamaños de la parte de la imagen de las tarjetas */
   width: 100%;
@@ -51,7 +50,7 @@
   object-fit: cover;
 }
 
-/* Contenedor de información textual del producto (div.info-producto) */
+/* información del producto*/
 .info-producto {
   padding: 1.5rem;
   flex: 1;
@@ -60,7 +59,7 @@
   text-align: left; /* Alinea el texto a la izquierda para mejor lectura */
 }
 
-/* Encabezado de la tarjeta (nombre y badge de categoría) */
+/* Encabezado de la tarjeta */
 .encabezado-producto {
   display: flex;
   justify-content: space-between;
@@ -68,13 +67,13 @@
   margin-bottom: 1rem;
 }
 
-/* Título del producto (h3 dentro de .encabezado-producto) */
+/* Título del producto */
 .encabezado-producto h3 {
   font-size: 1.3rem;
   color: #2e5b2e;
 }
 
-/* Etiqueta de categoría del producto (span.etiqueta-categoria) */
+/* Etiqueta de categoría del producto */
 .etiqueta-categoria {
   background-color: #2e5b2e;
   color: white;
@@ -83,7 +82,7 @@
   font-size: 0.8rem;
 }
 
-/* Descripción del producto (p dentro de .info-producto) */
+/* Descripción del producto */
 .info-producto p {
   font-size: 0.9rem;
   color: #666;
@@ -91,7 +90,6 @@
   flex: 1;
 }
 
-/* Fila de especificaciones (div.especificaciones-producto) */
 .especificaciones-producto {
   display: flex;
   justify-content: space-between;
@@ -99,7 +97,7 @@
   color: #666;
 }
 
-/* Sección de logros (section.seccion-logros en informacion.html) */
+/* Sección de logros  */
 .grid-logros {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -108,14 +106,14 @@
   padding: 1rem;
 }
 
-/* Título de la sección de logros: desplazar hacia la derecha en escritorio */
+/* Título de la sección de logros*/
 @media (min-width: 769px) {
   .seccion-logros h2 {
     padding-left: 1%; 
   }
 }
 
-/* Tarjeta de logro (div.logro) con número y etiqueta */
+/* Tarjeta de logro */
 .logro {
   text-align: center;
   padding: 2rem;
@@ -123,7 +121,7 @@
   border-radius: 14px;
 }
 
-/* Número grande del logro (span.numero) */
+/* Número logro */
 .logro .numero {
   font-size: 2.5rem;
   font-weight: bold;
@@ -132,13 +130,13 @@
   margin-bottom: 0.5rem;
 }
 
-/* Texto/etiqueta del logro (span.etiqueta) */
+/* etiqueta del logro  */
 .logro .etiqueta {
   font-size: 1rem;
   color: #666;
 }
 
-/* Grid de Certificaciones (div.grid-certificaciones en informacion.html) */
+/* Grid de Certificaciones */
 .grid-certificaciones {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -146,7 +144,7 @@
   margin-top: 2rem;
 }
 
-/* Tarjeta individual de certificación (div.tarjeta-certificacion) */
+/* Tarjeta individual de certificación */
 .tarjeta-certificacion {
   display: flex;
   flex-direction: column;
@@ -154,14 +152,14 @@
   text-align: center;
 }
 
-/* Título de certificación (h3) */
+/* Título de certificación */
 .tarjeta-certificacion h3 {
   font-size: 1.3rem;
   color: #2e5b2e;
   margin-bottom: 0.5rem;
 }
 
-/* Descripción corta de la certificación (p) */
+/* Descripción corta de la certificación */
 .tarjeta-certificacion p {
   font-size: 0.9rem;
   color: #666;
@@ -169,27 +167,27 @@
 
 
 
-/* Título de la caja de categoría (h3) */
+/* Título de la caja de categoría */
 .caja-categoria h3 {
   font-size: 1.5rem;
   color: #2e5b2e;
   margin-bottom: 1rem;
 }
 
-/* Párrafo descriptivo dentro de la caja (p) */
+/* Párrafo descriptivo dentro de la caja */
 .caja-categoria p {
   font-size: 1rem;
   color: #666;
   margin-bottom: 1rem;
 }
 
-/* Lista de puntos dentro de la caja (ul) */
+/* Lista de puntos dentro de la caja */
 .caja-categoria ul {
   list-style: none;
   padding-left: 1rem;
 }
 
-/* Ítems de la lista con viñeta personalizada (li) */
+/* Ítems de la lista con viñeta personalizada */
 .caja-categoria li {
   font-size: 0.9rem;
   color: #666;
@@ -198,15 +196,8 @@
   padding-left: 1rem;
 }
 
-/* Viñeta personalizada para los ítems de categoría */
-.caja-categoria li:before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #2e5b2e;
-}
 
-/* Contenedor de botones de filtro (div.botones-filtro en catálogo) */
+/* Contenedor de botones de filtro  */
 .botones-filtro {
   display: flex;
   gap: 1rem;
@@ -224,7 +215,7 @@
   transition: all 0.3s ease;
 }
 
-/* Estados hover y activo del botón de filtro */
+/*botón de filtro */
 .boton-filtro:hover,
 .boton-filtro.activo {
   background-color: #2e5b2e;
@@ -232,35 +223,35 @@
   border-color: #2e5b2e;
 }
 
-/* Etiqueta de texto anterior a los filtros (div.etiqueta-filtro) */
+/* filtrar por categoria */
 .etiqueta-filtro {
   font-weight: 500;
   margin-bottom: 0.5rem;
   color: #333;
 }
 
-/* Conteo de productos mostrado bajo los filtros (div.conteo-productos) */
+/* Conteo de productos */
 .conteo-productos {
   font-size: 0.9rem;
   color: #666;
   margin-top: 1rem;
 }
 
-/* Sección de Información al final del catálogo (section.seccion-informacion) */
+/* Sección de Información al final del catálogo */
 .seccion-informacion {
   padding: 4rem 5%;
   background-color: #f0f0f0;
   text-align: center;
 }
 
-/* Título de la sección de información (h2) */
+/* Título de la sección de información */
 .seccion-informacion h2 {
   font-size: 2.2rem;
   color: #2e5b2e;
   margin-bottom: 1rem;
 }
 
-/* Descripción de la sección de información (p) */
+/* Descripción de la sección de información */
 .seccion-informacion p {
   font-size: 1.1rem;
   color: #666;
@@ -270,7 +261,7 @@
   margin-right: auto;
 }
 
-/* Contenedor de botones "Solicitar" y "Descargar" (div.botones-informacion) */
+/* Contenedor de botones "Solicitar" y "Descargar" (*/
 .botones-informacion {
   display: flex;
   justify-content: center;
@@ -278,7 +269,7 @@
   flex-wrap: wrap;
 }
 
-/* Sección de Historia (section.seccion-historia en informacion.html) */
+/* en informacion.html */
 .seccion-historia {
   display: flex;
   gap: 2rem;
@@ -286,19 +277,19 @@
   background-color: white;
 }
 
-/* Columna de contenido (div.contenido-historia) */
+/* Columna de contenido*/
 .contenido-historia {
   flex: 1;
 }
 
-/* Título de historia (h2 dentro de .contenido-historia) */
+/* Título de historia  */
 .contenido-historia h2 {
   font-size: 2.2rem;
   color: #2e5b2e;
   margin-bottom: 1rem;
 }
 
-/* Párrafos de historia (p dentro de .contenido-historia) */
+/* Párrafos de historia */
 .contenido-historia p {
   font-size: 1.1rem;
   color: #666;
@@ -306,12 +297,12 @@
   line-height: 1.6;
 }
 
-/* Columna de imagen de historia (div.imagen-historia) */
+/* imagen de historia  */
 .imagen-historia {
   flex: 1;
 }
 
-/* Imagen dentro de historia (img dentro de .imagen-historia) */
+/* Imagen dentro de historia  */
 .imagen-historia img {
   width: 100%;
   border-radius: 10px;
@@ -333,7 +324,7 @@
   background-color: white;
 }
 
-/* Título de la sección de principios (h2) */
+/* Título de la sección de principios */
 .seccion-principios h2 {
   font-size: 2.2rem;
   color: #2e5b2e;
@@ -341,20 +332,20 @@
   text-align: center;
 }
 
-/* Grid de tarjetas de principios (div.grid-principios) */
+/* Grid de tarjetas de principios  */
 .grid-principios {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-/* Sección de Certificaciones (section.seccion-certificaciones en informacion.html) */
+/* Sección de Certificaciones  */
 .seccion-certificaciones {
   padding: 4rem 5%;
   background-color: white;
 }
 
-/* Título de certificaciones (h2) */
+/* Título de certificaciones */
 .seccion-certificaciones h2 {
   font-size: 2.2rem;
   color: #2e5b2e;
@@ -364,7 +355,7 @@
 
 /* Responsive de secciones de Información (MVV, Principios, Logros, Certificaciones) */
 @media (max-width: 992px) {
-  /* Tablet: reducir columnas */
+  /* reducir columnas */
   .seccion-mvv { 
     grid-template-columns: repeat(2, 1fr); 
   }

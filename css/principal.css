@@ -12,8 +12,7 @@ body {
   color: #333;
 }
 
-/* Botones */
-/* Estilos base para cualquier elemento con clase .btn (a, button) */
+
 .btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -30,7 +29,7 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Variación de botón verde (clase .btn-verde: CTA, enlaces en Inicio y Catálogo) */
+/* Variación de botón verde (CTA, enlaces en Inicio y Catálogo) */
 .btn-verde {
   background-color: #2e5b2e;
   color: white;
@@ -41,7 +40,7 @@ body {
   background-color: #244724;
 }
 
-/* Variación de botón naranja (clase .btn-naranja: enlace "Ver Catálogo" en Inicio) */
+/* Variación de botón naranja  */
 .btn-naranja {
   background-color: #e68a00;
   color: white;
@@ -52,7 +51,7 @@ body {
   background-color: #cc7a00;
 }
 
-/* Botón con contorno verde (clase .btn-contorno: enlaces secundarios) */
+/* Botón con contorno verde */
 .btn-contorno {
   background-color: transparent;
   color: #2e5b2e;
@@ -65,7 +64,7 @@ body {
   color: white;
 }
 
-/* Botón claro (clase .btn-claro: usado en contacto para llamada) */
+/* Botón claro (en contacto para llamada) */
 .btn-claro {
   background-color: #e0f7e0;
   color: #2e5b2e;
@@ -76,9 +75,8 @@ body {
   background-color: #ccebc5;
 }
 
-/* Badges */
-/* Insignias/contadores (span.badge, usado en los filtros del catálogo) */
-.badge {
+/* Insignias/contadores */
+.filtros-categoria {
   background-color: #2e5b2e;
   color: white;
   padding: 0.2rem 0.5rem;
