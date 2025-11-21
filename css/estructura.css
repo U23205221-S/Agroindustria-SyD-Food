@@ -29,6 +29,29 @@
   color: #2e5b2e;
 }
 
+/* Botón de menú hamburguesa */
+.menu-hamburguesa {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #2e5b2e;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+  z-index: 1001;
+  position: relative;
+}
+
+.menu-hamburguesa:hover {
+  color: #244724;
+}
+
+.menu-hamburguesa:focus {
+  outline: 2px solid #2e5b2e;
+  outline-offset: 2px;
+}
+
 /* Lista de navegación principal */
 .navegacion ul {
   display: flex;
@@ -537,15 +560,66 @@
 @media (max-width: 768px) {
   /* Ajustes del encabezado en pantallas pequeñas */
   .encabezado {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem 2%;
+    position: relative;
   }
 
-  /* Navegación adaptable (lista de enlaces) */
-  .navegacion ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
+  /* Mostrar botón hamburguesa en tablets también */
+  .menu-hamburguesa {
+    display: block;
+  }
+
+  /* Ocultar navegación normal en tablets */
+  .navegacion {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+  }
+
+  /* Mostrar navegación cuando está activa */
+  .navegacion.activo {
+    display: block;
+  }
+
+  /* Estilos del menú en tablets */
+  .navegacion.activo ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .navegacion.activo li {
+    width: 100%;
+    margin: 0;
+  }
+
+  .navegacion.activo a {
+    display: block;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .navegacion.activo a:hover,
+  .navegacion.activo a.activo {
+    background-color: #2e5b2e;
+    color: white;
+  }
+
+  .navegacion.activo a:last-child {
+    border-bottom: none;
   }
 
   /* Estructura de la sección heroe en columnas */
@@ -608,6 +682,98 @@
 
 /* Reglas para pantallas <= 480px (móviles) */
 @media (max-width: 480px) {
+  /* Mostrar botón hamburguesa y ocultar navegación normal */
+  .menu-hamburguesa {
+    display: block !important;
+    z-index: 1001;
+  }
+
+  /* Ocultar navegación por defecto en móvil */
+  .navegacion {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Mostrar navegación cuando está activa */
+  .navegacion.activo {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Estilos del menú hamburguesa activo */
+  .navegacion.activo ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+  }
+
+  .navegacion.activo li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navegacion.activo a {
+    display: block;
+    padding: 1.2rem 2rem;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .navegacion.activo a:hover {
+    background-color: #2e5b2e;
+    color: white;
+  }
+
+  .navegacion.activo a.activo {
+    background-color: #2e5b2e;
+    color: white;
+  }
+
+  .navegacion.activo a:last-child {
+    border-bottom: none;
+  }
+
+  /* Ajustes del encabezado en móvil */
+  .encabezado {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2%;
+  }
+
+  /* Asegurar que el logo no se desborde */
+  .logo span {
+    font-size: 0.9rem;
+  }
+
+  /* Ocultar navegación normal en móvil */
+  .navegacion:not(.activo) ul {
+    display: none;
+  }
+
   /* Grid de características a 1 columna */
   .grid-caracteristicas {
     grid-template-columns: 1fr;

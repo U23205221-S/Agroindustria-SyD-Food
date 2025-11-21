@@ -41,99 +41,336 @@ function actualizarContador(cantidad) {
   }
 }
 
-// Función para actualizar los contadores de categorías en los botones
-function actualizarContadoresCategorias() {
-  const totalProductos = productos.length;
-  const totalMenestras = productos.filter(p => p.categoria === 'Menestras').length;
-  const totalCereales = productos.filter(p => p.categoria === 'Cereales').length;
-  
-  const botones = document.querySelectorAll('.boton-filtro');
-  botones.forEach(boton => {
-    const texto = boton.textContent.trim();
-    const spanContador = boton.querySelector('.filtros-categoria');
-    
-    if (spanContador) {
-      if (texto.includes('Todos')) {
-        spanContador.textContent = totalProductos;
-      } else if (texto.includes('Menestras')) {
-        spanContador.textContent = totalMenestras;
-      } else if (texto.includes('Cereales')) {
-        spanContador.textContent = totalCereales;
-      }
-    }
-  });
-}
-
-// ============================================
-// LÓGICA DE FILTRADO
-// ============================================
-
-// Función para filtrar productos por categoría
-function filtrarProductos(categoria) {
-  let productosFiltrados;
-  
-  if (categoria === 'Todos') {
-    productosFiltrados = productos;
-  } else {
-    productosFiltrados = productos.filter(producto => producto.categoria === categoria);
-  }
-  
-  cargarProductos(productosFiltrados);
-}
-
-// Event listeners para los botones de filtro
-function inicializarFiltros() {
-  const botonesFiltro = document.querySelectorAll('.boton-filtro');
-  
-  botonesFiltro.forEach(boton => {
-    boton.addEventListener('click', function() {
-      // Remover clase activo de todos los botones
-      botonesFiltro.forEach(btn => btn.classList.remove('activo'));
-      
-      // Agregar clase activo al botón clickeado
-      this.classList.add('activo');
-      
-      // Obtener la categoría del texto del botón
-      const textoBoton = this.textContent.trim();
-      let categoriaSeleccionada;
-      
-      if (textoBoton.includes('Todos')) {
-        categoriaSeleccionada = 'Todos';
-      } else if (textoBoton.includes('Menestras')) {
-        categoriaSeleccionada = 'Menestras';
-      } else if (textoBoton.includes('Cereales')) {
-        categoriaSeleccionada = 'Cereales';
-      }
-      
-      // Filtrar productos
-      filtrarProductos(categoriaSeleccionada);
-    });
-  });
-}
-
-// ============================================
 // INICIALIZACIÓN DEL CATÁLOGO
-// ============================================
 
 // Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
   // Verificar si estamos en la página del catálogo
   if (document.querySelector('.grid-productos')) {
     cargarProductos(productos);
-    actualizarContadoresCategorias();
     inicializarFiltros();
   }
 });
 
 
-// FUNCIONALIDAD DEL FORMULARIO DE CONTACTO
+// FORMULARIO DE CONTACTO CON EMAILJS
+//Configuración de EmailJS
+
+const EMAILJS_CONFIG = {
+  // Public Key de EmailJS
+  PUBLIC_KEY: '9I7SvJDXcnHVFjpgF',
+  // ID del servicio de email
+  SERVICE_ID: 'service_55a1vld',
+  // ID del template de email
+  TEMPLATE_ID: 'template_bpugwjj',
+  // Email de destino
+  TO_EMAIL: 'renzosa1906@gmail.com'
+};
+
+// Módulo para gestionar el formulario de contacto
+
+const FormularioContacto = {
+  formulario: null,
+  btnEnviar: null,
+  textoBoton: null,
+  mensajeExito: null,
+  mensajeError: null,
+  textoError: null,
+
+  //Inicializa el módulo del formulario
+  init() {
+    this.formulario = document.getElementById('formulario-contacto');
+    
+    if (!this.formulario) {
+      return;
+    }
+
+    // Inicializar EmailJS
+    if (typeof emailjs !== 'undefined') {
+      emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+    }
+
+    // Obtener referencias a elementos del DOM
+    this.btnEnviar = document.getElementById('btn-enviar');
+    this.textoBoton = document.getElementById('texto-boton');
+    this.mensajeExito = document.getElementById('mensaje-exito');
+    this.mensajeError = document.getElementById('mensaje-error');
+    this.textoError = document.getElementById('texto-error');
+
+    // Agregar event listener al formulario
+    this.formulario.addEventListener('submit', (e) => {
+      this.manejarEnvio(e);
+    });
+  },
+
+   // Maneja el envío del formulario
+    // @param {Event} event - Evento de submit del formulario
+  async manejarEnvio(event) {
+    event.preventDefault();
+
+    // Validar configuración de EmailJS
+    if (EMAILJS_CONFIG.PUBLIC_KEY === 'TU_PUBLIC_KEY_AQUI' ||
+        EMAILJS_CONFIG.SERVICE_ID === 'TU_SERVICE_ID_AQUI' ||
+        EMAILJS_CONFIG.TEMPLATE_ID === 'TU_TEMPLATE_ID_AQUI' ||
+        !EMAILJS_CONFIG.PUBLIC_KEY ||
+        !EMAILJS_CONFIG.SERVICE_ID ||
+        !EMAILJS_CONFIG.TEMPLATE_ID) {
+      this.mostrarError('Por favor, configura EmailJS primero. Revisa la documentación.');
+      return;
+    }
+
+    // Obtener datos del formulario
+    const formData = new FormData(this.formulario);
+    const datos = {
+      nombre: formData.get('nombre'),
+      email: formData.get('email'),
+      telefono: formData.get('telefono') || 'No proporcionado',
+      empresa: formData.get('empresa') || 'No proporcionado',
+      mensaje: formData.get('mensaje'),
+      to_email: EMAILJS_CONFIG.TO_EMAIL
+    };
+
+    // Validar campos requeridos
+    if (!datos.nombre || !datos.email || !datos.mensaje) {
+      this.mostrarError('Por favor, completa todos los campos requeridos.');
+      return;
+    }
+
+    // Mostrar estado de carga
+    this.mostrarCargando(true);
+
+    try {
+      // Enviar email usando EmailJS
+      const respuesta = await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        {
+          from_name: datos.nombre,
+          from_email: datos.email,
+          telefono: datos.telefono,
+          empresa: datos.empresa,
+          message: datos.mensaje,
+          to_email: datos.to_email,
+          reply_to: datos.email
+        }
+      );
+
+      // Éxito
+      if (respuesta.status === 200) {
+        this.mostrarExito();
+        this.formulario.reset();
+      } else {
+        throw new Error('Error en la respuesta del servidor');
+      }
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+      this.mostrarError('Error al enviar el mensaje. Por favor, intenta nuevamente más tarde.');
+    } finally {
+      this.mostrarCargando(false);
+    }
+  },
+
+   // Muestra el estado de carga
+   // @param {boolean} cargando - Indica si está cargando
+  mostrarCargando(cargando) {
+    if (this.btnEnviar) {
+      this.btnEnviar.disabled = cargando;
+      if (this.textoBoton) {
+        this.textoBoton.textContent = cargando ? 'Enviando...' : 'Enviar mensaje';
+      }
+    }
+    this.ocultarMensajes();
+  },
+
+  // Muestra mensaje de éxito
+  mostrarExito() {
+    if (this.mensajeExito) {
+      this.mensajeExito.style.display = 'block';
+      this.mensajeExito.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    if (this.mensajeError) {
+      this.mensajeError.style.display = 'none';
+    }
+
+    // Ocultar mensaje después de 5 segundos
+    setTimeout(() => {
+      if (this.mensajeExito) {
+        this.mensajeExito.style.display = 'none';
+      }
+    }, 5000);
+  },
+
+   //Muestra mensaje de error @param {string} mensaje - Mensaje de error a mostrar
+  mostrarError(mensaje) {
+    if (this.mensajeError) {
+      this.mensajeError.style.display = 'block';
+      if (this.textoError) {
+        this.textoError.textContent = mensaje;
+      }
+      this.mensajeError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    if (this.mensajeExito) {
+      this.mensajeExito.style.display = 'none';
+    }
+
+    // Ocultar mensaje después de 5 segundos
+    setTimeout(() => {
+      if (this.mensajeError) {
+        this.mensajeError.style.display = 'none';
+      }
+    }, 5000);
+  },
+
+  //Oculta todos los mensajes
+  ocultarMensajes() {
+    if (this.mensajeExito) {
+      this.mensajeExito.style.display = 'none';
+    }
+    if (this.mensajeError) {
+      this.mensajeError.style.display = 'none';
+    }
+  }
+};
 
 
-// Funcionalidad para el formulario de contacto
-document.getElementById('formulario-contacto')?.addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('¡Mensaje enviado! Nos pondremos en contacto contigo lo antes posible.');
-  this.reset();
+// MENÚ HAMBURGUESA
+
+//Módulo para gestionar el menú hamburguesa en dispositivos móviles proporciona funcionalidad de toggle, cierre automático y navegación
+
+const MenuHamburguesa = {
+  // Referencias a elementos del DOM
+  botonHamburguesa: null,
+  navegacion: null,
+  icono: null,
+  enlacesNavegacion: null,
+  inicializado: false,
+
+  //Inicializa el módulo del menú hamburguesa
+  init() {
+    // Evitar inicialización múltiple
+    if (this.inicializado) {
+      return;
+    }
+
+    this.botonHamburguesa = document.querySelector('.menu-hamburguesa');
+    this.navegacion = document.querySelector('.navegacion');
+
+    if (!this.botonHamburguesa || !this.navegacion) {
+      console.warn('MenuHamburguesa: No se encontraron los elementos necesarios');
+      return;
+    }
+
+    this.icono = this.botonHamburguesa.querySelector('i');
+    this.enlacesNavegacion = this.navegacion.querySelectorAll('a');
+
+    this.agregarEventListeners();
+    this.inicializado = true;
+  },
+
+  //Agrega todos los event listeners necesarios
+  agregarEventListeners() {
+    // Handler para el toggle del menú
+    const handleToggleClick = (e) => {
+      e.stopPropagation();
+      this.toggleMenu();
+    };
+
+    // Handler para cerrar el menú al hacer clic en un enlace
+    const handleEnlaceClick = () => {
+      this.cerrarMenu();
+    };
+
+    // Handler para cerrar el menú al hacer clic fuera
+    const handleClickOutside = (event) => {
+      const esClickEnNavegacion = this.navegacion.contains(event.target);
+      const esClickEnBoton = this.botonHamburguesa.contains(event.target);
+
+      if (!esClickEnNavegacion && !esClickEnBoton && this.estaAbierto()) {
+        this.cerrarMenu();
+      }
+    };
+
+    // Handler para cerrar con Escape
+    const handleEscape = (event) => {
+      if (event.key === 'Escape' && this.estaAbierto()) {
+        this.cerrarMenu();
+      }
+    };
+
+    // Agregar event listeners
+    this.botonHamburguesa.addEventListener('click', handleToggleClick);
+
+    // Cerrar el menú al hacer clic en un enlace
+    this.enlacesNavegacion.forEach((enlace) => {
+      enlace.addEventListener('click', handleEnlaceClick);
+    });
+
+    // Cerrar el menú al hacer clic fuera de él
+    document.addEventListener('click', handleClickOutside);
+
+    // Cerrar el menú con la tecla Escape
+    document.addEventListener('keydown', handleEscape);
+  },
+
+  //retorna boolean
+  estaAbierto() {
+    return this.navegacion.classList.contains('activo');
+  },
+
+  //Alterna el estado del menú (abrir/cerrar)
+  toggleMenu() {
+    if (this.estaAbierto()) {
+      this.cerrarMenu();
+    } else {
+      this.abrirMenu();
+    }
+  },
+
+  //Abre el menú hamburguesa
+  abrirMenu() {
+    this.navegacion.classList.add('activo');
+    this.actualizarIcono(true);
+  },
+
+  //Cierra el menú hamburguesa
+  cerrarMenu() {
+    this.navegacion.classList.remove('activo');
+    this.actualizarIcono(false);
+  },
+
+  //retorna boolean si esta abierto o cerrado
+  actualizarIcono(abierto) {
+    if (!this.icono) return;
+
+    if (abierto) {
+      this.icono.classList.remove('bi-list');
+      this.icono.classList.add('bi-x-lg');
+    } else {
+      this.icono.classList.remove('bi-x-lg');
+      this.icono.classList.add('bi-list');
+    }
+  }
+};
+
+
+// INICIALIZACIÓN GENERAL
+
+
+// Inicialización general
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Inicializar menú hamburguesa
+  MenuHamburguesa.init();
+
+  // Inicializar formulario de contacto
+  FormularioContacto.init();
+
+  // Inicializar catálogo si existe
+  if (document.querySelector('.grid-productos')) {
+    cargarProductos(productos);
+    actualizarContadoresCategorias();
+    inicializarFiltros();
+  }
 });
 
 
