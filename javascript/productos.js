@@ -1,6 +1,5 @@
-// ============================================
+
 // BASE DE DATOS DE PRODUCTOS
-// ============================================
 // Este archivo contiene todos los productos del catálogo
 
 const productos = [
