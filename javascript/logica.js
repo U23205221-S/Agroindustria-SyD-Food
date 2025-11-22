@@ -1,9 +1,8 @@
-// FUNCIONES DE RENDERIZADO DEL CATÁLOGO
 // Función para renderizar productos dinámicamente
 function cargarProductos(lista) {
   const contenedor = document.querySelector('.grid-productos');
   
-  if (!contenedor) return; // Si no existe el contenedor, salir de la función
+  if (!contenedor) return; // Si no existe el contenedor sale de la función
   
   // Limpiar contenedor
   contenedor.innerHTML = '';
@@ -40,18 +39,6 @@ function actualizarContador(cantidad) {
     contadorElemento.textContent = `Mostrando ${cantidad} producto${cantidad !== 1 ? 's' : ''}`;
   }
 }
-
-// INICIALIZACIÓN DEL CATÁLOGO
-
-// Inicializar cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', function() {
-  // Verificar si estamos en la página del catálogo
-  if (document.querySelector('.grid-productos')) {
-    cargarProductos(productos);
-    
-  }
-});
-
 
 // FORMULARIO DE CONTACTO CON EMAILJS
 //Configuración de EmailJS
@@ -107,17 +94,6 @@ const FormularioContacto = {
     // @param {Event} event - Evento de submit del formulario
   async manejarEnvio(event) {
     event.preventDefault();
-
-    // Validar configuración de EmailJS
-    if (EMAILJS_CONFIG.PUBLIC_KEY === 'TU_PUBLIC_KEY_AQUI' ||
-        EMAILJS_CONFIG.SERVICE_ID === 'TU_SERVICE_ID_AQUI' ||
-        EMAILJS_CONFIG.TEMPLATE_ID === 'TU_TEMPLATE_ID_AQUI' ||
-        !EMAILJS_CONFIG.PUBLIC_KEY ||
-        !EMAILJS_CONFIG.SERVICE_ID ||
-        !EMAILJS_CONFIG.TEMPLATE_ID) {
-      this.mostrarError('Por favor, configura EmailJS primero. Revisa la documentación.');
-      return;
-    }
 
     // Obtener datos del formulario
     const formData = new FormData(this.formulario);
@@ -352,20 +328,14 @@ const MenuHamburguesa = {
   }
 };
 
-
-// INICIALIZACIÓN GENERAL
-
-
 // Inicialización general
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Inicializar menú hamburguesa
+  // Inicializa menú hamburguesa
   MenuHamburguesa.init();
-
-  // Inicializar formulario de contacto
+  // Inicializa formulario de contacto
   FormularioContacto.init();
-
-  // Inicializar catálogo si existe
+  // Inicializa catálogo si existe
   if (document.querySelector('.grid-productos')) {
     cargarProductos(productos);
   }

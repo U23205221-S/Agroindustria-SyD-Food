@@ -187,48 +187,6 @@
   padding-left: 1rem;
 }
 
-/* Ítems de la lista con viñeta personalizada */
-.caja-categoria li {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 0.5rem;
-  position: relative;
-  padding-left: 1rem;
-}
-
-
-/* Contenedor de botones de filtro  */
-.botones-filtro {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-}
-
-/* Botón individual de filtro (button.boton-filtro en catálogo) */
-.boton-filtro {
-  padding: 0.5rem 1rem;
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-/*botón de filtro */
-.boton-filtro:hover,
-.boton-filtro.activo {
-  background-color: #2e5b2e;
-  color: white;
-  border-color: #2e5b2e;
-}
-
-/* filtrar por categoria */
-.etiqueta-filtro {
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
 
 /* Conteo de productos */
 .conteo-productos {
