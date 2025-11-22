@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Verificar si estamos en la página del catálogo
   if (document.querySelector('.grid-productos')) {
     cargarProductos(productos);
-    inicializarFiltros();
+    
   }
 });
 
@@ -368,8 +368,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Inicializar catálogo si existe
   if (document.querySelector('.grid-productos')) {
     cargarProductos(productos);
-    actualizarContadoresCategorias();
-    inicializarFiltros();
   }
 });
 
