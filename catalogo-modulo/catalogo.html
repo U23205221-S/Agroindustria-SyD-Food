@@ -48,6 +48,10 @@
   <!-- Filtros -->
   <section class="seccion-filtros">
   
+    <div class="buscador-contenedor">
+      <input type="text" id="buscador-productos" placeholder="Buscar productos..." class="input-buscador">
+      <i class="bi bi-search"></i>
+    </div>
     <div class="conteo-productos">Mostrando 9 productos</div>
   </section>
 
@@ -63,7 +67,7 @@
     <p>Nuestro equipo comercial está listo para atenderte. Contáctanos para conocer precios, disponibilidad y condiciones especiales para pedidos al por mayor.</p>
     <div class="botones-informacion">
       <a href="../contacto.html" class="btn btn-verde">Solicitar Cotización</a>
-      <a href="#" class="btn btn-contorno">Descargar Catálogo PDF</a>
+      <a href="#" id="btn-descargar-catalogo" class="btn btn-contorno">Descargar Catálogo PDF</a>
     </div>
   </section>
 
@@ -126,7 +130,10 @@
   </footer>
 
   <!-- Scripts: primero cargar los datos, luego la lógica -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
   <script src="../javascript/productos.js"></script>
   <script src="../javascript/logica.js"></script>
+  <script src="../javascript/catalogo.js"></script>
 </body>
 </html>

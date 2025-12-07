@@ -338,6 +338,20 @@ document.addEventListener('DOMContentLoaded', function() {
   // Inicializa catálogo si existe
   if (document.querySelector('.grid-productos')) {
     cargarProductos(productos);
+    
+    // Inicializar búsqueda
+    const inputBuscador = document.getElementById('buscador-productos');
+    if (inputBuscador) {
+      inputBuscador.addEventListener('input', (e) => {
+        const termino = e.target.value.toLowerCase();
+        const productosFiltrados = productos.filter(producto => 
+          producto.nombre.toLowerCase().includes(termino) || 
+          producto.descripcion.toLowerCase().includes(termino) ||
+          producto.categoria.toLowerCase().includes(termino)
+        );
+        cargarProductos(productosFiltrados);
+      });
+    }
   }
 });
 

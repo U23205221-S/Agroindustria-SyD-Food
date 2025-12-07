@@ -388,3 +388,30 @@
   cursor: not-allowed;
   pointer-events: none;
 }
+
+/* Buscador de productos */
+.buscador-contenedor {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.buscador-contenedor input {
+  border: none;
+  background: transparent;
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+}
+
+.buscador-contenedor i {
+  color: #666;
+  font-size: 1.2rem;
+}
