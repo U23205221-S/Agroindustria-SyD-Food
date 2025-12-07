@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://agroindustria-sy-d-food.vercel.app/</loc>
+      <lastmod>2025-12-06</lastmod>
+      <priority>1.00</priority>
+   </url>
+   <url>
+      <loc>https://agroindustria-sy-d-food.vercel.app/informacion.html</loc>
+      <lastmod>2025-12-06</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://agroindustria-sy-d-food.vercel.app/catalogo-modulo/catalogo.html</loc>
+      <lastmod>2025-12-06</lastmod>
+      <priority>0.90</priority>
+   </url>
+   <url>
+      <loc>https://agroindustria-sy-d-food.vercel.app/contacto.html</loc>
+      <lastmod>2025-12-06</lastmod>
+      <priority>0.80</priority>
+   </url>
+</urlset>

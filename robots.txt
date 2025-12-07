@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://agroindustria-sy-d-food.vercel.app/sitemap.xml
