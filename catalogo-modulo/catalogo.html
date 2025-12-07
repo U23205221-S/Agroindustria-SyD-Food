@@ -25,6 +25,9 @@
             <img src="imagenes/logo.jpg" alt="Logo S&D">
             <span>Agroindustria S&D FOOD E.I.R.L.</span>
         </div>
+        <button class="menu-hamburguesa" aria-label="Menú de navegación">
+            <i class="bi bi-list"></i>
+        </button>
         <nav class="navegacion">
             <ul>
                 <li><a href="../Inicio.html">Inicio</a></li>
@@ -43,170 +46,15 @@
 
   <!-- Filtros -->
   <section class="seccion-filtros">
-    <div class="etiqueta-filtro"><i class="bi bi-funnel-fill"></i> Filtrar por categoría:</div>
-    <div class="botones-filtro">
-      <button class="boton-filtro activo">Todos los productos <span class="filtros-categoria">9</span></button>
-      <button class="boton-filtro">Menestras <span class="filtros-categoria">5</span></button>
-      <button class="boton-filtro">Cereales <span class="filtros-categoria">4</span></button>
-    </div>
+  
     <div class="conteo-productos">Mostrando 9 productos</div>
   </section>
 
   <!-- Cuadrícula de productos -->
-
+  <!-- Los productos se cargan dinámicamente desde logica.js -->
   <section class="grid-productos">
-    <!-- ejemplo de tarjeta ya lista solo para cambiar ruta -->
-    <div class="tarjeta-producto">
-      <img src="imagenes/Arroz 250gr.png" alt="Arroz 250g">
-      <div class="info-producto">
-        <div class="encabezado-producto">
-          <h3>Arroz 250g</h3>
-          <span class="etiqueta-categoria">Cereales</span>
-        </div>
-        <p>Arroz de grano largo, seleccionado y empaquetado en porciones de 250g. Ideal para acompañar tus platos favoritos.</p>
-        <div class="especificaciones-producto">
-          <span>Presentación:</span>
-          <span>Bolsas de 250g</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="tarjeta-producto">
-      <img src="imagenes/Arroz 1kg.png" alt="Arroz 1 Kg">
-      <div class="info-producto">
-        <div class="encabezado-producto">
-          <h3>Arroz 1kg</h3>
-          <span class="etiqueta-categoria">Cereales</span>
-        </div>
-        <p>Arroz de grano largo, seleccionado y empaquetado en porciones de 1kg. Ideal para acompañar tus platos favoritos.</p>
-        <div class="especificaciones-producto">
-          <span>Presentación:</span>
-          <span>Bolsas de 1kg</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="tarjeta-producto">
-      <img src="imagenes/Arroz Añejo Superior 250gr.png" alt="Arroz Añejo Superior 250g">
-      <div class="info-producto">
-        <div class="encabezado-producto">
-          <h3>Arroz Añejo Superior 250g</h3>
-          <span class="etiqueta-categoria">Cereales</span>
-        </div>
-        <p>Arroz de grano añejo largo, seleccionado y empaquetado en porciones de 250g. Ideal para acompañar tus platos favoritos.</p>
-        <div class="especificaciones-producto">
-          <span>Presentación:</span>
-          <span>Bolsas de 250g</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="tarjeta-producto">
-      <img src="imagenes/Arroz Añejo Superior 1kg.png" alt="Arroz Añejo Superior 1kg">
-      <div class="info-producto">
-        <div class="encabezado-producto">
-          <h3>Arroz Añejo Superior 1kg</h3>
-          <span class="etiqueta-categoria">Cereales</span>
-        </div>
-        <p>Arroz de grano añejo largo, seleccionado y empaquetado en porciones de 1kg. Ideal para acompañar tus platos favoritos.</p>
-        <div class="especificaciones-producto">
-          <span>Presentación:</span>
-          <span>Bolsas de 1kg</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="tarjeta-producto">
-      <img src="imagenes/Arroz fortificado 250gr.png" alt="Arroz fortificado 250g">
-      <div class="info-producto">
-        <div class="encabezado-producto">
-          <h3>Arroz fortificado 250g</h3>
-          <span class="etiqueta-categoria">Cereales</span>
-        </div>
-        <p>Arroz de grano largo con una pequeña cantidad de granos simil, seleccionado y empaquetado en porciones de 250g. Ideal para acompañar tus platos favoritos.</p>
-        <div class="especificaciones-producto">
-          <span>Presentación:</span>
-          <span>Bolsas de 250g</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="tarjeta-producto">
-      <img src="imagenes/Arroz fortificado 1kg.png " alt="Arroz fortificado 1kg">
-      <div class="info-producto">
-        <div class="encabezado-producto">
-          <h3>Arroz fortificado 1kg </h3>
-          <span class="etiqueta-categoria">Cereales</span>
-        </div>
-        <p>Arroz de grano largo con una pequeña cantidad de granos simil, seleccionado y empaquetado en porciones de 1kg. Ideal para acompañar tus platos favoritos.</p>
-        <div class="especificaciones-producto">
-          <span>Presentación:</span>
-          <span>Bolsas de 1kg</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="tarjeta-producto">
-      <img src="imagenes/Arroz fortificado Añejo 250gr.png" alt="Arroz fortificado Añejo 250gr">
-      <div class="info-producto">
-        <div class="encabezado-producto">
-          <h3>Arroz Fortificado Añejo 250g</h3>
-          <span class="etiqueta-categoria">Cereales</span>
-        </div>
-        <p>Arroz de grano Añejo largo con una pequeña cantidad de granos simil, seleccionado y empaquetado en porciones de 250g. Ideal para acompañar tus platos favoritos.</p>
-        <div class="especificaciones-producto">
-          <span>Presentación:</span>
-          <span>Bolsas de 250gr</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="tarjeta-producto">
-      <img src="imagenes/Arroz fortificado Añejo 1kg.png" alt="Arroz Fortificado Añejo 1kg">
-      <div class="info-producto">
-        <div class="encabezado-producto">
-          <h3>Arroz Fortificado Añejo 1kg</h3>
-          <span class="etiqueta-categoria">Cereales</span>
-        </div>
-        <p>Arroz de grano Añejo largo con una pequeña cantidad de granos simil, seleccionado y empaquetado en porciones de 1kg. Ideal para acompañar tus platos favoritos.</p>
-        <div class="especificaciones-producto">
-          <span>Presentación:</span>
-          <span>Bolsas de 1kg</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="tarjeta-producto">
-      <img src="imagenes/Azucar 250gr.png" alt="Azucar 250g">
-      <div class="info-producto">
-        <div class="encabezado-producto">
-          <h3>Azucar 250g</h3>
-          <span class="etiqueta-categoria">Cereales</span>
-        </div>
-        <p>Azúcar rubia , seleccionado y empaquetado en porciones de 250g. Ideal para acompañar tus platos favoritos.</p>
-        <div class="especificaciones-producto">
-          <span>Presentación:</span>
-          <span>Bolsas de 250g</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="tarjeta-producto">
-      <img src="imagenes/Azucar 1kg.png" alt="Azucar 1kg">
-      <div class="info-producto">
-        <div class="encabezado-producto">
-          <h3>Azucar 1kg</h3>
-          <span class="etiqueta-categoria">Cereales</span>
-        </div>
-        <p>Azúcar rubia , seleccionado y empaquetado en porciones de 1kg. Ideal para acompañar tus platos favoritos.</p>
-        <div class="especificaciones-producto">
-          <span>Presentación:</span>
-          <span>Bolsas de 1kg</span>
-        </div>
-      </div>
-    </div>
-
-    </section>
+    <!-- El contenido se genera automáticamente mediante JavaScript -->
+  </section>
 
     <!-- Sección de información -->
   <section class="seccion-informacion">
@@ -276,6 +124,8 @@
     </div>
   </footer>
 
+  <!-- Scripts: primero cargar los datos, luego la lógica -->
+  <script src="../javascript/productos.js"></script>
   <script src="../javascript/logica.js"></script>
 </body>
 </html>

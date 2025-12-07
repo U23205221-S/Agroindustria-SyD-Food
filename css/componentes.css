@@ -187,48 +187,6 @@
   padding-left: 1rem;
 }
 
-/* Ítems de la lista con viñeta personalizada */
-.caja-categoria li {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 0.5rem;
-  position: relative;
-  padding-left: 1rem;
-}
-
-
-/* Contenedor de botones de filtro  */
-.botones-filtro {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-}
-
-/* Botón individual de filtro (button.boton-filtro en catálogo) */
-.boton-filtro {
-  padding: 0.5rem 1rem;
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-/*botón de filtro */
-.boton-filtro:hover,
-.boton-filtro.activo {
-  background-color: #2e5b2e;
-  color: white;
-  border-color: #2e5b2e;
-}
-
-/* filtrar por categoria */
-.etiqueta-filtro {
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
 
 /* Conteo de productos */
 .conteo-productos {
@@ -384,4 +342,49 @@
   .grid-logros { 
     grid-template-columns: 1fr; 
   }
+}
+
+/* MENSAJES DEL FORMULARIO DE CONTACTO */
+
+/* Mensaje de éxito */
+.mensaje-exito {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  border: 1px solid #c3e6cb;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mensaje-exito i {
+  font-size: 1.2rem;
+  color: #28a745;
+}
+
+/* Mensaje de error */
+.mensaje-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  border: 1px solid #f5c6cb;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mensaje-error i {
+  font-size: 1.2rem;
+  color: #dc3545;
+}
+
+/* Botón deshabilitado */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
 }
