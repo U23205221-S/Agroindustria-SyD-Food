@@ -93,7 +93,7 @@
 /* Descripción/subtítulo dentro de .titulo-pagina */
 .titulo-pagina p {
   font-size: 1.1rem;
-  color: #666;
+  color: #595959;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -160,7 +160,7 @@
 /* Párrafo de introducción en por que */
 .por-que p {
   font-size: 1.1rem;
-  color: #666;
+  color: #595959;
   margin-bottom: 2rem;
   max-width: 800px;
   margin-left: auto;
@@ -233,7 +233,7 @@
 /* Párrafos en sección nosotros */
 .contenido-nosotros p {
   font-size: 1.1rem;
-  color: #666;
+  color: #595959;
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
@@ -440,7 +440,7 @@
 /* Texto de la sección visita */
 .seccion-visita p {
   font-size: 1.1rem;
-  color: #666;
+  color: #595959;
   margin-bottom: 2rem;
   max-width: 800px;
   margin-left: auto;

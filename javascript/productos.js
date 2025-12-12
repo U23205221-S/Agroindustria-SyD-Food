@@ -9,7 +9,7 @@ const productos = [
     categoria: "Cereales",
     descripcion: "Arroz de grano largo, seleccionado y empaquetado en porciones de 250g. Ideal para acompañar tus platos favoritos.",
     presentacion: "Bolsas de 250g",
-    imagen: "imagenes/Arroz 250gr.png"
+    imagen: "imagenes/Arroz 250gr.webp"
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const productos = [
     categoria: "Cereales",
     descripcion: "Arroz de grano largo, seleccionado y empaquetado en porciones de 1kg. Ideal para acompañar tus platos favoritos.",
     presentacion: "Bolsas de 1kg",
-    imagen: "imagenes/Arroz 1kg.png"
+    imagen: "imagenes/Arroz 1kg.webp"
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const productos = [
     categoria: "Cereales",
     descripcion: "Arroz de grano añejo largo, seleccionado y empaquetado en porciones de 250g. Ideal para acompañar tus platos favoritos.",
     presentacion: "Bolsas de 250g",
-    imagen: "imagenes/Arroz Añejo Superior 250gr.png"
+    imagen: "imagenes/Arroz Añejo Superior 250gr.webp"
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const productos = [
     categoria: "Cereales",
     descripcion: "Arroz de grano añejo largo, seleccionado y empaquetado en porciones de 1kg. Ideal para acompañar tus platos favoritos.",
     presentacion: "Bolsas de 1kg",
-    imagen: "imagenes/Arroz Añejo Superior 1kg.png"
+    imagen: "imagenes/Arroz Añejo Superior 1kg.webp"
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ const productos = [
     categoria: "Cereales",
     descripcion: "Arroz de grano largo con una pequeña cantidad de granos simil, seleccionado y empaquetado en porciones de 250g. Ideal para acompañar tus platos favoritos.",
     presentacion: "Bolsas de 250g",
-    imagen: "imagenes/Arroz fortificado 250gr.png"
+    imagen: "imagenes/Arroz fortificado 250gr.webp"
   },
   {
     id: 6,
@@ -49,7 +49,7 @@ const productos = [
     categoria: "Cereales",
     descripcion: "Arroz de grano largo con una pequeña cantidad de granos simil, seleccionado y empaquetado en porciones de 1kg. Ideal para acompañar tus platos favoritos.",
     presentacion: "Bolsas de 1kg",
-    imagen: "imagenes/Arroz fortificado 1kg.png"
+    imagen: "imagenes/Arroz fortificado 1kg.webp"
   },
   {
     id: 7,
@@ -57,7 +57,7 @@ const productos = [
     categoria: "Cereales",
     descripcion: "Arroz de grano Añejo largo con una pequeña cantidad de granos simil, seleccionado y empaquetado en porciones de 250g. Ideal para acompañar tus platos favoritos.",
     presentacion: "Bolsas de 250g",
-    imagen: "imagenes/Arroz fortificado Añejo 250gr.png"
+    imagen: "imagenes/Arroz fortificado Añejo 250gr.webp"
   },
   {
     id: 8,
@@ -65,7 +65,7 @@ const productos = [
     categoria: "Cereales",
     descripcion: "Arroz de grano Añejo largo con una pequeña cantidad de granos simil, seleccionado y empaquetado en porciones de 1kg. Ideal para acompañar tus platos favoritos.",
     presentacion: "Bolsas de 1kg",
-    imagen: "imagenes/Arroz fortificado Añejo 1kg.png"
+    imagen: "imagenes/Arroz fortificado Añejo 1kg.webp"
   },
   {
     id: 9,
@@ -73,7 +73,7 @@ const productos = [
     categoria: "Cereales",
     descripcion: "Azúcar rubia, seleccionado y empaquetado en porciones de 250g. Ideal para acompañar tus platos favoritos.",
     presentacion: "Bolsas de 250g",
-    imagen: "imagenes/Azucar 250gr.png"
+    imagen: "imagenes/Azucar 250gr.webp"
   },
   {
     id: 10,
@@ -81,6 +81,6 @@ const productos = [
     categoria: "Cereales",
     descripcion: "Azúcar rubia, seleccionado y empaquetado en porciones de 1kg. Ideal para acompañar tus platos favoritos.",
     presentacion: "Bolsas de 1kg",
-    imagen: "imagenes/Azucar 1kg.png"
+    imagen: "imagenes/Azucar 1kg.webp"
   }
 ];

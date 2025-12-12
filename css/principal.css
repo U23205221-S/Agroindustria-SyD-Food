@@ -6,6 +6,13 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Optimización de carga de fuentes - font-display swap para mejor LCP */
+@font-face {
+  font-family: 'Segoe UI';
+  font-display: swap;
+  src: local('Segoe UI');
+}
+
 /* Fondo y color de texto global del documento (etiqueta body en todas las páginas) */
 body {
   background-color: #f9f9f9;
@@ -83,4 +90,17 @@ body {
   border-radius: 10px;
   font-size: 0.8rem;
   margin-left: 0.5rem;
+}
+
+/* Clase de accesibilidad para contenido solo visible por lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
