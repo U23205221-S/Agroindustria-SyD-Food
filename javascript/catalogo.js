@@ -119,7 +119,7 @@ async function generarPDF() {
         doc.setFontSize(8);
         doc.setTextColor(150);
         doc.text(`Página ${i} de ${pageCount}`, 105, 290, null, null, "center");
-        doc.text("www.agroindustriasdfood.com", 105, 285, null, null, "center");
+        doc.text("https://agroindustria-sy-d-food.vercel.app/", 105, 285, null, null, "center");
     }
 
     // Guardar el PDF
